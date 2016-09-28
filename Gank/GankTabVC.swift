@@ -88,7 +88,10 @@ class GankTabVC :UIViewController,UITableViewDelegate,UITableViewDataSource{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         debugPrint(indexPath.row)
         if(isFirst()){
-            
+            let iv = ImageDisplayVC()
+            iv.mzArray = mzArray
+            iv.currentIndex = indexPath.row
+            navigationController?.pushViewController(iv, animated: true)
         }else{
             let wv = WebDetailVC()
             let data = gitArray[indexPath.row]
@@ -113,7 +116,6 @@ class GankTabVC :UIViewController,UITableViewDelegate,UITableViewDataSource{
         if(self.isFirst()){
             return 700.0
         }else{
-            
             let data = gitArray[indexPath.row]
             sampleCell.lbl.text = data["desc"].string
             let size = sampleCell.lbl.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
