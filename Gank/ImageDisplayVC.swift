@@ -38,24 +38,26 @@ class ImageDisplayVC :UIViewController,UICollectionViewDelegate,UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false // 手动控制全屏
+        
         self.view.addSubview(cv)
         cv.snp_makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
         
-        automaticallyAdjustsScrollViewInsets = false // 手动控制全屏
         cv.registerClass(MZDisplayCell.self, forCellWithReuseIdentifier: "cell")
         
-        //cv.reloadData()
+        cv.reloadData()
 //        let nsIndex = NSIndexPath(forItem: currentIndex, inSection: 0)
 //        cv.selectItemAtIndexPath(nsIndex, animated: false, scrollPosition: UICollectionViewScrollPosition.CenteredHorizontally)
         // 显示用户选中的页
         
     }
     
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        cv.selectItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection: 0), animated: false, scrollPosition: .CenteredHorizontally)
+        cv.selectItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection:0), animated: false, scrollPosition: .CenteredHorizontally)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -64,6 +66,7 @@ class ImageDisplayVC :UIViewController,UICollectionViewDelegate,UICollectionView
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         debugPrint(indexPath.item)
+        cv.selectItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection:0), animated: false, scrollPosition: .CenteredHorizontally)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
