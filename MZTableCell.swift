@@ -31,7 +31,7 @@ class MZTableCell: UITableViewCell {
         if let u = data["url"].string{
             iv_show.kf_setImageWithURL(NSURL(string: u)!, placeholderImage:nil )
         }
-        lbl_txt?.text="who:\(data["who"])  desc:\(data["desc"])  type:\(data["type"])"
+        lbl_txt?.text="\(data["who"].string ?? "")  \(data["desc"].string ?? "")  \(data["type"].string ?? "")"
     }
     
 }

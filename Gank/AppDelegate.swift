@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainTVC = GankTableVC()
+//        let mainTVC = GankTableVC()
+        let mainTVC = GankTabVC()
         
         let nc = UINavigationController(rootViewController: mainTVC)
         self.window?.rootViewController = nc

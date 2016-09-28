@@ -14,6 +14,7 @@ import Kingfisher
 
 
 class GankTableVC:UITableViewController{
+    
     var API_MEIZHI = "http://gank.io/api/search/query/listview/category/%E7%A6%8F%E5%88%A9/count/10/page/"
     
     var page:Int = 1

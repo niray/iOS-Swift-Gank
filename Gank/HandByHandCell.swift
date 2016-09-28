@@ -23,6 +23,7 @@ class HandByHandCell :UITableViewCell{
     
     lazy var lbl_content : UILabel = {
         let a = UILabel()
+        a.numberOfLines = 0
         return a
     }()
     
@@ -38,7 +39,7 @@ class HandByHandCell :UITableViewCell{
             make.left.equalTo(self.contentView).offset(10)
             make.right.equalTo(self.contentView).offset(-10)
             make.top.equalTo(self.contentView).offset(10)
-            make.bottom.equalTo(self.contentView).offset(-50)
+            make.bottom.equalTo(self.contentView).offset(-70)
         }
         
         self.lbl_content.snp_makeConstraints { (make) in
@@ -57,6 +58,6 @@ class HandByHandCell :UITableViewCell{
         if let u = data["url"].string{
             iv_avatar.kf_setImageWithURL(NSURL(string: u)!, placeholderImage:nil )
         }
-        self.lbl_content.text="who:\(data["who"])  desc:\(data["desc"])  type:\(data["type"])"
+        lbl_content.text="\(data["who"].string ?? "")  \(data["desc"].string ?? "")  \(data["type"].string ?? "")"
     }
 }
