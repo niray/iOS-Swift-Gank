@@ -30,14 +30,15 @@ class ImageDisplayVC :UIViewController,UICollectionViewDelegate,UICollectionView
         cetV.dataSource = self
         cetV.pagingEnabled = true
         return cetV
-        
     }()
     
     var mzArray = Array<JSON>()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "一键直达", style: .Done, target: self, action: Selector("onChatClick"))
+        
         automaticallyAdjustsScrollViewInsets = false // 手动控制全屏
         
         self.view.addSubview(cv)
@@ -48,13 +49,17 @@ class ImageDisplayVC :UIViewController,UICollectionViewDelegate,UICollectionView
         cv.registerClass(MZDisplayCell.self, forCellWithReuseIdentifier: "cell")
         
         cv.reloadData()
-//        let nsIndex = NSIndexPath(forItem: currentIndex, inSection: 0)
-//        cv.selectItemAtIndexPath(nsIndex, animated: false, scrollPosition: UICollectionViewScrollPosition.CenteredHorizontally)
-        // 显示用户选中的页
-        
+//      let nsIndex = NSIndexPath(forItem: currentIndex, inSection: 0)
+//      cv.selectItemAtIndexPath(nsIndex, animated: false, scrollPosition: UICollectionViewScrollPosition.CenteredHorizontally)
+//      显示用户选中的页
+    }
+
+    func onChatClick(){
+        debugPrint("Click")
+        let chatVC = ChatTableVC()
+        navigationController?.pushViewController(chatVC, animated: true)
     }
     
-
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         cv.selectItemAtIndexPath(NSIndexPath(forItem: currentIndex, inSection:0), animated: false, scrollPosition: .CenteredHorizontally)

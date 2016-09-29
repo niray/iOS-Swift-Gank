@@ -13,6 +13,11 @@
 		0427BE381D9A427A00063C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0427BE371D9A427A00063C79 /* Assets.xcassets */; };
 		0427BE3B1D9A427A00063C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0427BE391D9A427A00063C79 /* LaunchScreen.storyboard */; };
 		0427BE431D9A480300063C79 /* GankTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427BE421D9A480300063C79 /* GankTableVC.swift */; };
+		047DB1991D9CA1D700AB738E /* ChatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DB1981D9CA1D700AB738E /* ChatTableVC.swift */; };
+		047DB19B1D9CA41000AB738E /* ChatDataBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DB19A1D9CA41000AB738E /* ChatDataBean.swift */; };
+		047DB19D1D9CA8ED00AB738E /* ChatLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DB19C1D9CA8ED00AB738E /* ChatLeftCell.swift */; };
+		047DB19F1D9CB84A00AB738E /* ChatRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DB19E1D9CB84A00AB738E /* ChatRightCell.swift */; };
+		047DB1A21D9CE84300AB738E /* UIViewController+KeyboardAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DB1A11D9CE84300AB738E /* UIViewController+KeyboardAdditions.m */; };
 		04B985011D9A6750008C3D2F /* MZTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B984FF1D9A6750008C3D2F /* MZTableCell.swift */; };
 		04B985021D9A6750008C3D2F /* MZTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B985001D9A6750008C3D2F /* MZTableCell.xib */; };
 		04E93B021D9B4B7C008F3A00 /* HandByHandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E93B011D9B4B7C008F3A00 /* HandByHandCell.swift */; };
@@ -53,6 +58,12 @@
 		0427BE3A1D9A427A00063C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0427BE3C1D9A427A00063C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0427BE421D9A480300063C79 /* GankTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankTableVC.swift; sourceTree = "<group>"; };
+		047DB1981D9CA1D700AB738E /* ChatTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableVC.swift; sourceTree = "<group>"; };
+		047DB19A1D9CA41000AB738E /* ChatDataBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDataBean.swift; sourceTree = "<group>"; };
+		047DB19C1D9CA8ED00AB738E /* ChatLeftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLeftCell.swift; sourceTree = "<group>"; };
+		047DB19E1D9CB84A00AB738E /* ChatRightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRightCell.swift; sourceTree = "<group>"; };
+		047DB1A01D9CE84300AB738E /* UIViewController+KeyboardAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardAdditions.h"; sourceTree = "<group>"; };
+		047DB1A11D9CE84300AB738E /* UIViewController+KeyboardAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardAdditions.m"; sourceTree = "<group>"; };
 		04B984FF1D9A6750008C3D2F /* MZTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MZTableCell.swift; path = ../MZTableCell.swift; sourceTree = "<group>"; };
 		04B985001D9A6750008C3D2F /* MZTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MZTableCell.xib; path = ../MZTableCell.xib; sourceTree = "<group>"; };
 		04E93B011D9B4B7C008F3A00 /* HandByHandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandByHandCell.swift; sourceTree = "<group>"; };
@@ -142,6 +153,8 @@
 		0427BE2F1D9A427900063C79 /* Gank */ = {
 			isa = PBXGroup;
 			children = (
+				047DB1A01D9CE84300AB738E /* UIViewController+KeyboardAdditions.h */,
+				047DB1A11D9CE84300AB738E /* UIViewController+KeyboardAdditions.m */,
 				0427BE301D9A427900063C79 /* AppDelegate.swift */,
 				0427BE321D9A427A00063C79 /* ViewController.swift */,
 				0427BE341D9A427A00063C79 /* Main.storyboard */,
@@ -157,6 +170,10 @@
 				04E93BAE1D9B9BEF008F3A00 /* AutoFitHCell.swift */,
 				04E93BB01D9BA71C008F3A00 /* ImageDisplayVC.swift */,
 				04E93BB21D9BB379008F3A00 /* MZDisplayCell.swift */,
+				047DB1981D9CA1D700AB738E /* ChatTableVC.swift */,
+				047DB19A1D9CA41000AB738E /* ChatDataBean.swift */,
+				047DB19E1D9CB84A00AB738E /* ChatRightCell.swift */,
+				047DB19C1D9CA8ED00AB738E /* ChatLeftCell.swift */,
 			);
 			path = Gank;
 			sourceTree = "<group>";
@@ -411,13 +428,16 @@
 				04E93BA11D9B522B008F3A00 /* MJRefreshGifHeader.m in Sources */,
 				04E93B9F1D9B522B008F3A00 /* MJRefreshBackNormalFooter.m in Sources */,
 				04E93BA51D9B522B008F3A00 /* MJRefreshConst.m in Sources */,
+				047DB19B1D9CA41000AB738E /* ChatDataBean.swift in Sources */,
 				04E93BAB1D9B5C2C008F3A00 /* GankTabVC.swift in Sources */,
 				04E93B981D9B522B008F3A00 /* MJRefreshComponent.m in Sources */,
+				047DB1A21D9CE84300AB738E /* UIViewController+KeyboardAdditions.m in Sources */,
 				04E93BA91D9B522B008F3A00 /* UIView+MJExtension.m in Sources */,
 				04E93B9B1D9B522B008F3A00 /* MJRefreshAutoGifFooter.m in Sources */,
 				04E93BAD1D9B968E008F3A00 /* WebDetailVC.swift in Sources */,
 				04E93BA71D9B522B008F3A00 /* UIScrollView+MJExtension.m in Sources */,
 				04E93B971D9B522B008F3A00 /* MJRefreshBackFooter.m in Sources */,
+				047DB1991D9CA1D700AB738E /* ChatTableVC.swift in Sources */,
 				0427BE331D9A427A00063C79 /* ViewController.swift in Sources */,
 				04B985011D9A6750008C3D2F /* MZTableCell.swift in Sources */,
 				04E93B9C1D9B522B008F3A00 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -427,12 +447,14 @@
 				04E93B9A1D9B522B008F3A00 /* MJRefreshHeader.m in Sources */,
 				04E93B9D1D9B522B008F3A00 /* MJRefreshAutoStateFooter.m in Sources */,
 				04E93BB31D9BB379008F3A00 /* MZDisplayCell.swift in Sources */,
+				047DB19D1D9CA8ED00AB738E /* ChatLeftCell.swift in Sources */,
 				04E93BB11D9BA71C008F3A00 /* ImageDisplayVC.swift in Sources */,
 				04E93B991D9B522B008F3A00 /* MJRefreshFooter.m in Sources */,
 				04E93BA81D9B522B008F3A00 /* UIScrollView+MJRefresh.m in Sources */,
 				04E93BA01D9B522B008F3A00 /* MJRefreshBackStateFooter.m in Sources */,
 				04E93B021D9B4B7C008F3A00 /* HandByHandCell.swift in Sources */,
 				04E93B961D9B522B008F3A00 /* MJRefreshAutoFooter.m in Sources */,
+				047DB19F1D9CB84A00AB738E /* ChatRightCell.swift in Sources */,
 				0427BE311D9A427900063C79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,6 +35,7 @@ class AutoFitHCell : UITableViewCell {
     func fitHeight(){
         let lb = UILabel()
         
+        lb.numberOfLines = 0
         lb.preferredMaxLayoutWidth = UIScreen.mainScreen().bounds.width - 20
         lb.text = ""
         let size = lb.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
